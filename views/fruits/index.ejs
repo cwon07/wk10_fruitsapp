@@ -5,11 +5,16 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div>
+            <p><%= user %> is logged in.</p>
+            <a href="/user/logout"><button>Logout</button></a>
+            <a href="/fruits/new">Create New Fruit</a>
             <% for (fruit of fruits) { %>
                 <article>
-                    <h2>
-                        <%= fruit.name %>
-                    </h2>
+                    <a href="/fruits/<%=fruit._id%>">
+                        <h2>
+                            <%= fruit.name %>
+                        </h2>
+                    </a>                   
                 </article>
             <% } %>
         </div>

@@ -5,7 +5,15 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div>
-           
+            <form action="/fruits" method="post">
+                <fieldset>
+                    <legend>Create a new fruit</legend>
+                    <label>Name: <input type="text" name="name" placeholder="enter fruit name"/></label>
+                    <label>Color: <input type="text" name="color" placeholder="enter fruit color"/></label>
+                    <label>Ready to eat: <input type="checkbox" name="readyToEat"/></label>
+                    <input type="submit" value="create new fruit"/>
+                </fieldset>
+            </form>
         </div>
     </main>
 </body>
